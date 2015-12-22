@@ -109,14 +109,14 @@ function upd(){
 	var row = dg.datagrid('getSelected');
 	if(rowIsNull(row)) return;
 	d=$("#dlg").dialog({   
-	    title: '修改用户',    
-	    width: 380,    
-	    height: 340,    
-	    href:'${ctx}/account/user/update/'+row.id,
+	    title: '计划分配',    
+	    width: 680,    
+	    height: 440,    
+	    href:'${ctx}/account/plan/dist/'+row.id,
 	    maximizable:true,
 	    modal:true,
 	    buttons:[{
-			text:'修改',
+			text:'确认分配',
 			handler:function(){
 				$('#mainform').submit(); 
 			}

@@ -33,8 +33,8 @@ import com.tianyu.jty.system.utils.UserUtil;
  * @date 2015年1月13日
  */
 @Controller
-@RequestMapping("account/plan")
-public class PlanController extends BaseController {
+@RequestMapping("account/sale")
+public class SaleController extends BaseController {
 
 	@Autowired
 	private PlanService planService;
@@ -96,7 +96,7 @@ public class PlanController extends BaseController {
 	public String createForm(Model model) {
 		model.addAttribute("plan", new Plan());
 		model.addAttribute("action", "create");
-		return "account/plancreate";
+		return "account/salecreate";
 	}
 
 	/**

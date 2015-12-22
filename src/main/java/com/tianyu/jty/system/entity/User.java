@@ -23,6 +23,7 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * 用户entity
@@ -32,6 +33,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Entity
 @Table(name = "user")
 @DynamicUpdate @DynamicInsert
+@JsonIgnoreProperties(value={"hibernateLazyInitializer"})  
 public class User implements java.io.Serializable {
 
 	// Fields
@@ -54,7 +56,17 @@ public class User implements java.io.Serializable {
 	private Timestamp previousVisit;
 	private Timestamp lastVisit;
 	private String delFlag;
-	
+	private User puser;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "p_aaa", nullable = true)
+	public User getPuser() {
+		return puser;
+	}
+
+	public void setPuser(User puser) {
+		this.puser = puser;
+	}
+
 	private Integer lev;
 	@JsonIgnore
 	private Set<UserRole> userRoles = new HashSet<UserRole>(0);

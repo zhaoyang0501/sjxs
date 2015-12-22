@@ -14,7 +14,7 @@ import com.tianyu.jty.jetty.Profiles;
  */
 public class QuickStartServer {
 
-	public static final int PORT = 8080;
+	public static final int PORT = 9080;
 	public static final String CONTEXT = "/jty";
 	public static final String[] TLD_JAR_NAMES = new String[] {"spring-webmvc", "shiro-web"};
 

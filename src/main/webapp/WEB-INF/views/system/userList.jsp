@@ -68,7 +68,7 @@ $(function(){
        			return value==1?'男':'女';
         	}
         },
-        {field:'leader',title:'上级经销商',sortable:true,width:100,formatter: function(value,row,index){
+        {field:'puser',title:'上级经销商',sortable:true,width:100,formatter: function(value,row,index){
 			return value==null?"":value.name;
 		}}, 		
         {field:'lev',title:'级别',sortable:true,width:100,formatter: function(value,row,index){

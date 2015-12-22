@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -16,16 +17,20 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.tianyu.jty.system.entity.User;
 @Entity
 @Table(name = "acount_plan")
 @DynamicUpdate @DynamicInsert
+@JsonIgnoreProperties(value={"hibernateLazyInitializer"})  
 public class Plan {
+	/**
+	 * 
+	 */
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "ID", unique = true, nullable = false)
 	private Integer id;
-	
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
 	private Date createDate;
 	@JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+08:00")
@@ -35,10 +40,20 @@ public class Plan {
 	
 	private String name;
 	private Integer num;
-	@ManyToOne(fetch = FetchType.EAGER)
+	private Integer pplan;
+
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
 	private User user;
 	
 	private String remark;
+	public Integer getPplan() {
+		return pplan;
+	}
+	public void setPplan(Integer pplan) {
+		this.pplan = pplan;
+	}
+	
 	public String getRemark() {
 		return remark;
 	}
@@ -81,6 +96,8 @@ public class Plan {
 	public void setNum(Integer num) {
 		this.num = num;
 	}
+	@JsonIgnore
+	@ManyToOne(fetch = FetchType.LAZY)
 	public User getUser() {
 		return user;
 	}
