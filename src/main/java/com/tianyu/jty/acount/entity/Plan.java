@@ -40,6 +40,8 @@ public class Plan {
 	
 	private String name;
 	private Integer num;
+	private Integer endnum;
+	
 	private Integer pplan;
 
 	@JsonIgnore
@@ -103,5 +105,11 @@ public class Plan {
 	}
 	public void setUser(User user) {
 		this.user = user;
+	}
+	public Integer getEndnum() {
+		return endnum;
+	}
+	public void setEndnum(Integer endnum) {
+		this.endnum = endnum;
 	}
 }

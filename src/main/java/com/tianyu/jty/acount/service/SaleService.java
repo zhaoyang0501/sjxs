@@ -1,14 +1,11 @@
 package com.tianyu.jty.acount.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tianyu.jty.acount.dao.PlanDao;
-import com.tianyu.jty.acount.entity.Plan;
-import com.tianyu.jty.acount.entity.Trade;
+import com.tianyu.jty.acount.dao.SaleDao;
+import com.tianyu.jty.acount.entity.Sale;
 import com.tianyu.jty.common.persistence.HibernateDao;
 import com.tianyu.jty.common.service.BaseService;
 import com.tianyu.jty.common.utils.DateUtils;
@@ -20,14 +17,14 @@ import com.tianyu.jty.common.utils.DateUtils;
  */
 @Service
 @Transactional(readOnly = true)
-public class PlanService extends BaseService<Plan, Integer> {
+public class SaleService extends BaseService<Sale, Integer> {
 	
 	@Autowired
-	private PlanDao planDao;
+	private SaleDao userDao;
 
 	@Override
-	public HibernateDao<Plan, Integer> getEntityDao() {
-		return planDao;
+	public HibernateDao<Sale, Integer> getEntityDao() {
+		return userDao;
 	}
 
 	/**
@@ -35,9 +32,9 @@ public class PlanService extends BaseService<Plan, Integer> {
 	 * @param user
 	 */
 	@Transactional(readOnly=false)
-	public void save(Plan user) {
+	public void save(Sale user) {
 		user.setCreateDate(DateUtils.getSysTimestamp());
-		planDao.save(user);
+		userDao.save(user);
 	}
 
 	
@@ -47,9 +44,6 @@ public class PlanService extends BaseService<Plan, Integer> {
 	 */
 	@Transactional(readOnly=false)
 	public void delete(Integer id){
-			planDao.delete(id);
-	}
-	public List<Plan> findByPid(Integer pid){
-		return this.planDao.findByPid(pid);
+			userDao.delete(id);
 	}
 }

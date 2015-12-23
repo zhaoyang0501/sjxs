@@ -20,11 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tianyu.jty.acount.dto.PlanForm;
 import com.tianyu.jty.acount.entity.Plan;
-import com.tianyu.jty.acount.entity.Sale;
-import com.tianyu.jty.acount.entity.SaleItem;
-import com.tianyu.jty.acount.service.AccountTypeService;
 import com.tianyu.jty.acount.service.PlanService;
-import com.tianyu.jty.acount.service.SaleService;
 import com.tianyu.jty.common.persistence.Page;
 import com.tianyu.jty.common.persistence.PropertyFilter;
 import com.tianyu.jty.common.web.BaseController;
@@ -37,23 +33,19 @@ import com.tianyu.jty.system.utils.UserUtil;
  * @date 2015年1月13日
  */
 @Controller
-@RequestMapping("account/sale")
-public class SaleController extends BaseController {
+@RequestMapping("account/task")
+public class TaskController extends BaseController {
 
 	@Autowired
 	private PlanService planService;
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private SaleService saleService;
-	@Autowired
-	private AccountTypeService accountTypeService;
 	/**
 	 * 默认页面
 	 */
 	@RequestMapping(method = RequestMethod.GET)
 	public String list() {
-		return "account/planList";
+		return "account/taskList";
 	}
 
 	/**
@@ -67,12 +59,15 @@ public class SaleController extends BaseController {
 		page = planService.search(page, filters);
 		return getEasyUIData(page);
 	}
-	@RequestMapping(value = "dist/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "detail/{id}", method = RequestMethod.GET)
 	public String dist(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("plan", planService.get(id));
-		model.addAttribute("action", "update");
-		model.addAttribute("users", userService.findByPuser(UserUtil.getCurrentUser().getId()));
-		return "account/plandist";
+		List<Plan> plans=planService.findByPid(id);
+		for(Plan plan:plans){
+			System.out.println(plan.getUser().getName());
+		}
+		model.addAttribute("plans", planService.findByPid(id));
+		return "account/taskdetail";
 	}
 	
 	@RequestMapping(value = "dist", method = RequestMethod.POST)
@@ -104,8 +99,7 @@ public class SaleController extends BaseController {
 	public String createForm(Model model) {
 		model.addAttribute("plan", new Plan());
 		model.addAttribute("action", "create");
-		model.addAttribute("types",accountTypeService.getAll() );
-		return "account/salecreate";
+		return "account/plancreate";
 	}
 
 	/**
@@ -116,13 +110,9 @@ public class SaleController extends BaseController {
 	 */
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	@ResponseBody
-	public String create(@Valid Sale sale, Model model) {
-		
-		for(SaleItem bean:sale.getSaleitems()){
-			bean.setSale(sale);
-		}
-		sale.setUser(UserUtil.getCurrentUser());
-		saleService.save(sale);
+	public String create(@Valid Plan plan, Model model) {
+		plan.setUser(UserUtil.getCurrentUser());
+		planService.save(plan);
 		return "success";
 	}
 

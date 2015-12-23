@@ -63,7 +63,34 @@
 <script src="${ctx}/static/plugins/ztree/js/jquery.ztree.exhide-3.5.min.js"></script>
 
 <link rel="stylesheet" href="${ctx }/static/plugins/easyui/common/other.css"></link>
-
+<style type="text/css">
+		.doc-table{
+	border-collapse:collapse;
+	border-spacing:0;
+	width:100%;
+	margin-bottom: 1.65em;
+}
+.doc-table th,.doc-table td{
+	border:1px solid #8CACBB;
+	padding:0.3em 0.7em;
+}
+.doc-table th{
+	background:#eee;
+}
+.doc-table pre{
+	font-family:Verdana;
+	font-size:34px;
+	color:#006600;
+	background:#fafafa;
+	padding:5px;
+	margin: 12px 0;
+	line-height: 120%;
+}
+.doc-table p{
+	margin: 14px 0;
+	line-height: 100%;
+}
+</style>
 <script>
 //全局的AJAX访问，处理AJAX清求时SESSION超时
 $.ajaxSetup({
