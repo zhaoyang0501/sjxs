@@ -21,6 +21,10 @@ public class UserDao extends HibernateDao<User, Integer>{
 		String hql="select u from User u where u.puser.id=?0";
 		Query query= createQuery(hql, id);
 		return  query.list();
-		
+	}
+	
+	public void updatecash(Double cash,Integer id){
+		String hql="update User t set t.cash= t.cash+?0 where t.id=?1 ";
+		batchExecute(hql, cash,id);
 	}
 }

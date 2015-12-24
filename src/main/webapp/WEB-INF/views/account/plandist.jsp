@@ -13,7 +13,7 @@
 			<tr>
 				<td>上级下发：</td>
 				<input type="hidden" name='plan.id' value="${plan.id}"/>
-				<td><input id="name" name="name" value='${plan.num }' type="text" class="easyui-validatebox" data-options="width: 150" readonly="readonly"/></td>
+				<td><input id='dista' name="name" value='${plan.num }' type="text" class="easyui-validatebox" data-options="width: 150" readonly="readonly"/></td>
 			</tr>
 			<tr>
 				<td>未分配：</td>
@@ -36,7 +36,7 @@
   				  	<tr><td>${bean.name }</td><td>
   				  	<input  name="plans[${stauts.index }].user.id" value='${bean.id }' type="hidden" />
   			
-  				  	<input  name="plans[${stauts.index }].num" value='' type="text" class="easyui-numberbox" data-options="width: 100" /></td></tr>
+  				  	<input class='item_total' name="plans[${stauts.index }].num" value='0' type="text" class="easyui-numberbox" data-options="width: 100" onchange="fun_change()" /></td></tr>
   				  </c:forEach>
 			        </tbody>
        			 </table>
@@ -47,6 +47,14 @@
 </div>
 
 <script type="text/javascript">
+function fun_change(){
+	 var cash=0;
+	 $(".item_total").each(function(){
+		  cash+=parseFloat($(this).val());
+		});
+	var b=parseFloat($("#dista").val());
+	$("#undist").val(b-cash);
+}
 //提交表单
 $('#mainform').form({    
     onSubmit: function(){    

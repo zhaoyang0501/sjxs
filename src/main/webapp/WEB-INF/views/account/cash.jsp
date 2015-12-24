@@ -7,36 +7,34 @@
 
 </head>
 <body>
-    <div class="easyui-panel" title="计划制定" >
+    <div class="easyui-panel" title="定金" >
         <div style="padding:10px 60px 20px 60px">
         <form id="mainform" method="post">
             <table cellpadding="5">
             
             	<tr>
-                    <td>计划名称:</td>
-                    <td><input name="name" type="text" value="" class="easyui-validatebox" data-options="width: 150,required:'required',validType:'length[3,20]'"/></td>
+                    <td>当前账户定金余额:</td>
+                    <td>${cash }</td>
 	
                 </tr>
                 <tr>
-                    <td>计划起:</td>
-                   	<td><input class="easyui-datebox"  name="startDate" 
-       				 data-options="required:true,showSeconds:false" value="" style="width:150px"></td>
+                    <td>姓名:</td>
+                    <td><input id="num"  name="num" type="text" class="easyui-validatebox " data-options="required:'required',validType:'length[1,6]'"></input></td>
+            
                 </tr>
                 
                  <tr>
-                    <td>计划止:</td>
-                       	<td><input class="easyui-datebox"  name="endDate" 
-       					 data-options="required:true,showSeconds:false" value="" style="width:150px"></td>
+                    <td>定金金额:</td>
+                    <td><input id="num"  name="num" type="text" class="easyui-validatebox easyui-numberbox" data-options="required:'required',validType:'length[1,6]'"></input></td>
+            
                 </tr>
                 
                      <tr>
-                    <td>销量:</td>
-                   	<td><input id="num"  name="num" type="text" class="easyui-validatebox easyui-numberbox" data-options="required:'required',validType:'length[1,6]'"></input></td>
+                    <td>日期:</td>
+                  	<td><input class="easyui-datebox"   name="endDate" 
+       					 data-options="required:true,showSeconds:false" value="2015-12-24" style="width:150px"></td>
                 </tr>
-                <tr>
-                    <td>具体内容:</td>
-                    <td><input class="easyui-textbox" name="remark" data-options="multiline:true" style="height:60px"></input></td>
-                </tr>
+                
             </table>
         </form>
         <div style="text-align:center;padding:5px">

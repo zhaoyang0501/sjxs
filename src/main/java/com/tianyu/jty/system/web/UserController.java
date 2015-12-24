@@ -1,5 +1,6 @@
 package com.tianyu.jty.system.web;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -75,6 +76,7 @@ public class UserController extends BaseController {
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public String createForm(Model model) {
 		model.addAttribute("user", new User());
+		model.addAttribute("users", userService.search(new  ArrayList<PropertyFilter>()));
 		model.addAttribute("action", "create");
 		return "system/userForm";
 	}
@@ -105,6 +107,7 @@ public class UserController extends BaseController {
 	public String updateForm(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("user", userService.get(id));
 		model.addAttribute("action", "update");
+		model.addAttribute("users", userService.search(new  ArrayList<PropertyFilter>()));
 		return "system/userForm";
 	}
 

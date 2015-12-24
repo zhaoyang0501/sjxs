@@ -42,8 +42,24 @@ public class Sale {
 	private Double cash;
 	private Double earlycash;
 	private Double realcash;
-	@OneToMany( mappedBy = "sale",fetch=FetchType.EAGER,cascade = CascadeType.ALL)
+	private Integer totalnum;
+	
+	private Integer userid;
+	public Integer getUserid() {
+		return userid;
+	}
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
+	public Integer getTotalnum() {
+		return totalnum;
+	}
+	public void setTotalnum(Integer totalnum) {
+		this.totalnum = totalnum;
+	}
+	@OneToMany( mappedBy = "sale",fetch=FetchType.LAZY,cascade = CascadeType.ALL)
 	private List<SaleItem> saleitems;
+	
 	public List<SaleItem> getSaleitems() {
 		return saleitems;
 	}

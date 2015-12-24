@@ -57,6 +57,15 @@ public class User implements java.io.Serializable {
 	private Timestamp lastVisit;
 	private String delFlag;
 	private User puser;
+	private Double cash;
+	public Double getCash() {
+		return cash;
+	}
+
+	public void setCash(Double cash) {
+		this.cash = cash;
+	}
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "p_aaa", nullable = true)
 	public User getPuser() {

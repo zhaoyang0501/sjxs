@@ -66,7 +66,7 @@
 				<legend>销售产品</legend>
 				 <div style="margin:20px 0 10px 0;">
        					 <a href="#" class="easyui-linkbutton" onclick="addtype()">新增类型</a>
-       					 <a href="#" class="easyui-linkbutton" onclick="addtype()">新增产品</a>
+       					 <a href="#" class="easyui-linkbutton" onclick="addsale()">新增产品</a>
    				 </div>
 			<table class="doc-table" style="    border-collapse: collapse;
     border-spacing: 0;
@@ -102,16 +102,16 @@
 				<table>
 				 <tr>
                     <td>订单合计</td>
-                    <td><input id="cash" value="131"  name="cash" type="text"  readonly="readonly"></input></td>
+                    <td><input id="cash" value="0"  name="cash" type="text"  readonly="readonly"></input></td>
                 </tr>
                 <tr>
                     <td>定金:</td>
-                    <td><input id="earlycash" value="11"   name="earlycash" type="text"  readonly="readonly"></input></td>
+                    <td><input id="earlycash" value="0"   name="earlycash" type="text"  onchange="fun_change()"></input></td>
                 </tr>
                 
                 <tr>
                     <td>订单合计:</td>
-                    <td><input id="realcash"  value="12" name="realcash" type="text"  readonly="readonly"></input></td>
+                    <td><input id="realcash"  value="0" name="realcash" type="text"  readonly="readonly"></input></td>
                 </tr>
 				</table>
 				</fieldset>
@@ -137,27 +137,80 @@
                 </tr>
                 <tr>
                     <td>单价:</td>
-                    <td><input id='itemprice'  name="customer" type="text"  ></input></td>
+                    <td><input id='itemprice' value="0" name="customer" type="text" onchange="fun_changeitemprice()"  ></input></td>
                 </tr>
                 
                 <tr>
                     <td>数量:</td>
-                    <td><input id="itemnum"  name="addr" type="text"  ></input></td>
+                    <td><input id="itemnum"  value="0" name="addr" type="text"  onchange="fun_changeitemprice()" ></input></td>
                 </tr>
                  <tr>
                     <td>小计:</td>
-                    <td><input id="itemtoal"  name="addr" type="text"  ></input></td>
+                    <td><input  id="itemtoal"  value="0" name="addr" type="text"  ></input></td>
+                </tr>
+				</table>
+		</div>
+
+
+  <div id="addsale" >
+				<table>
+				 <tr>
+                    <td>类型</td>
+                    <td>
+                    	<select id='typename' onchange="fun_typechange()">
+                    	<option value="">--请选择--</option>
+                    	<c:forEach var="b" items="${types}">
+                    		<option value="${b.id }">${b.name }</option>
+                    	</c:forEach>
+                    	</select>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td>产品</td>
+                    <td>
+                    	<select id='salename' >
+                    	<option value="">--请选择--</option>
+                    	<c:forEach var="b" items="${types}">
+                    		<option value="${b.name }">${b.name }</option>
+                    	</c:forEach>
+                    	</select>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>单价:</td>
+                    <td><input id='saleprice' value="0" name="customer" type="text" onchange="fun_changetypeprice()" ></input></td>
+                </tr>
+                
+                <tr>
+                    <td>数量:</td>
+                    <td><input id="salenum" value="0" name="addr" type="text"  onchange="fun_changetypeprice()" ></input></td>
+                </tr>
+                 <tr>
+                    <td>服务费:</td>
+                    <td><input id="salefee"  value="0" type="text"  onchange="fun_changetypeprice()" ></input></td>
+                </tr>
+                
+                 <tr>
+                    <td>小计:</td>
+                    <td><input  id="saletoal" value="0" name="addr" type="text" readonly="readonly" ></input></td>
                 </tr>
 				</table>
 		</div>
 
     <script>
     var d1;
-    var d;
+    var d2;
     $(function(){
     	d1=$('#addtype').dialog({
         });
     	d1.panel('close');
+    	
+    	d2=$('#addsale').dialog({
+        });
+    	d2.panel('close');
     }); 
     function addtype(){
     	d1=$('#addtype').dialog({
@@ -173,13 +226,14 @@
     				d1.panel('close');
     				var index=$("#itemdetails tr").size() ;
     				$("#itemdetails").append("<tr>"+
-    		       			"<td><input name='saleitems["+index+"].name' value='"+$("#itemname").val()+"'/>"+$("#itemname").val()+"</td>"+
-    		       			"<td><input name='saleitems["+index+"].price' value='"+$("#itemprice").val()+"'/>"+$("#itemprice").val()+"</td>"+
-    		       			"<td><input name='saleitems["+index+"].num' value='"+$("#itemprice").val()+"'/>"+$("#itemnum").val()+""+$("#itemnum").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].name' value='"+$("#itemname").val()+"'/>"+$("#itemname").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].price' value='"+$("#itemprice").val()+"'/>"+$("#itemprice").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].num' value='"+$("#itemprice").val()+"'/>"+$("#itemnum").val()+""+$("#itemnum").val()+"</td>"+
     		       			"<td>0.0</td>"+
-    		       			"<td><input name='saleitems["+index+"].total' value='"+$("#itemtoal").val()+"'/>"+$("#itemtoal").val()+"</td>"+
-    		       			"<td> <a href='#' class='easyui-linkbutton' onclick='del()'>删除</a></td>"+
+    		       			"<td><input type='hidden' class='item_total' name='saleitems["+index+"].total' value='"+$("#itemtoal").val()+"'/>"+$("#itemtoal").val()+"</td>"+
+    		       			"<td> <a href='#' class='easyui-linkbutton' onclick='del(this)'>删除</a></td>"+
     		       			"</tr>");
+    				fun_cash();
     			}
     		},{
     			text:'关闭',
@@ -188,7 +242,36 @@
         });
     	d1.dialog('refresh');
     }
-    
+    function addsale(){
+    	d1=$('#addsale').dialog({
+            title: '添加产品',
+            width: 400,
+            height: 300,
+            closed: false,
+            cache: false,
+            modal: true,
+            buttons:[{
+    			text:'提交',
+    			handler:function(){
+    				d2.panel('close');
+    				var index=$("#itemdetails tr").size() ;
+    				$("#itemdetails").append("<tr>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].name' value='"+$("#salename").val()+"'/>"+$("#salename").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].price' value='"+$("#saleprice").val()+"'/>"+$("#saleprice").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].num' value='"+$("#saleprice").val()+"'/>"+$("#salenum").val()+"</td>"+
+    		       			"<td><input type='hidden'  name='saleitems["+index+"].fee' value='"+$("#salefee").val()+"'/>"+$("#salefee").val()+"</td>"+
+    		       			"<td><input type='hidden' class='item_total' name='saleitems["+index+"].total' value='"+$("#saletoal").val()+"'/>"+$("#saletoal").val()+"</td>"+
+    		       			"<td> <a href='#' class='easyui-linkbutton' onclick='del(this)'>删除</a></td>"+
+    		       			"</tr>");
+    				fun_cash();
+    			}
+    		},{
+    			text:'关闭',
+    			handler:function(){}
+    		}]
+        });
+    	d2.dialog('refresh');
+    }
     $('#mainform').form({    
         onSubmit: function(){    
         	var isValid = $(this).form('validate');
@@ -206,6 +289,49 @@
      }
      function clearForm(){
          $('#mainform').form('clear');
+     }
+     function fun_change(){
+    		$("#realcash").val(parseFloat($("#cash").val())-parseFloat($("#earlycash").val()));
+
+     }
+     function fun_changetypeprice(){
+    	 var p1=parseFloat($("#saleprice").val());
+    	 var p2=parseFloat($("#salenum").val());
+    	 var p3=parseFloat($("#salefee").val());
+    	 $("#saletoal").val(p1*p2+p3);
+     }
+     
+     function fun_changeitemprice(){
+    	 var p1=parseFloat($("#itemprice").val());
+    	 var p2=parseFloat($("#itemnum").val());
+    	 $("#itemtoal").val(p1*p2);
+     }
+     
+     function fun_typechange(){
+    	 alert($("#typename").val());
+    	 $.ajax({
+    		   url: "${ctx}/account/mytask/getsaletype/"+$("#typename").val(),
+    		   success: function(msg){
+    		     alert(  msg.length );
+    		     $("#salename").empty();
+    		     $("#salename").append("<option value=''>--请选择--</option>");
+    		     for(var i=0;i<msg.length;i++){
+    		    	 $("#salename").append("<option value='"+msg[i].name+"'>"+msg[i].name+"</option>");
+    		     }
+    		   }
+    		});
+     }
+     function fun_cash(){
+    	 var cash=0;
+    	 $(".item_total").each(function(){
+    		  cash+=parseFloat($(this).val());
+    		});
+    	$("#cash").val(cash);
+    	$("#realcash").val(cash-parseFloat($("#earlycash").val()));
+     }
+     function del(t){
+    	 $(t).parent().parent().remove();
+    	 fun_cash();
      }
     </script>
 

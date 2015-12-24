@@ -100,8 +100,8 @@ $(function(){
 function add() {
 	d=$("#dlg").dialog({   
 	    title: '添加用户',    
-	    width: 380,    
-	    height: 380,    
+	    width: 580,    
+	    height: 480,    
 	    href:'${ctx}/system/user/create',
 	    maximizable:true,
 	    modal:true,
@@ -142,8 +142,8 @@ function upd(){
 	if(rowIsNull(row)) return;
 	d=$("#dlg").dialog({   
 	    title: '修改用户',    
-	    width: 380,    
-	    height: 340,    
+	    width: 580,    
+	    height: 480,   
 	    href:'${ctx}/system/user/update/'+row.id,
 	    maximizable:true,
 	    modal:true,

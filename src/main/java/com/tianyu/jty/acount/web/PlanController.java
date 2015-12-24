@@ -56,6 +56,7 @@ public class PlanController extends BaseController {
 	public Map<String, Object> getData(HttpServletRequest request) {
 		Page<Plan> page = getPage(request);
 		List<PropertyFilter> filters = PropertyFilter.buildFromHttpRequest(request);
+		filters.add(new PropertyFilter("EQI_userid",UserUtil.getCurrentUser().getId().toString()));
 		page = planService.search(page, filters);
 		return getEasyUIData(page);
 	}
@@ -73,7 +74,9 @@ public class PlanController extends BaseController {
 		System.out.println(planform);
 		
 		Plan rooplan=planService.get(planform.getPlan().getId());
+		int num=0;
 		for(Plan plan:planform.getPlans()){
+			num+=plan.getNum();
 			plan.setCreateDate(new Date());
 			plan.setEndDate(rooplan.getEndDate());
 			plan.setName(rooplan.getName());
@@ -81,10 +84,12 @@ public class PlanController extends BaseController {
 			plan.setRemark(rooplan.getRemark());
 			plan.setStartDate(rooplan.getStartDate());
 			plan.setUser(userService.get(plan.getUser().getId()));
-			plan.setPplan(plan.getId());
+			plan.setPplan(rooplan.getId());
+			plan.setUserid(plan.getUser().getId());
 			planService.save(plan);
 		}
-		
+		rooplan.setUndist(rooplan.getNum()-num);
+		planService.save(rooplan);
 		return "success";
 	}
 	/**
@@ -108,7 +113,9 @@ public class PlanController extends BaseController {
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	@ResponseBody
 	public String create(@Valid Plan plan, Model model) {
+		plan.setUndist(plan.getNum());
 		plan.setUser(UserUtil.getCurrentUser());
+		plan.setUserid(UserUtil.getCurrentUser().getId());
 		planService.save(plan);
 		return "success";
 	}

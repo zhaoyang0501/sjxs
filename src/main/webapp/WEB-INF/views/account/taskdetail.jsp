@@ -17,7 +17,7 @@
                     <td>下发时间</td>
                     <td><b><fmt:formatDate value="${plan.createDate}" type="date" dateStyle="full"/></b></td>
                      <td rowspan="2">完成程度</td>
-                    <td rowspan="2"><b>90%</b></td>
+                    <td rowspan="2"><b>${(plan.endnum/plan.num)*100 }%</b></td>
                 </tr>
                 <tr>
                     <td>计划开始时间:</td>
@@ -47,7 +47,7 @@
 				</thead>
 				<tbody>
 				<c:forEach items="${plans}" var="bean">
-				<tr> <td>${bean.user.name }</td><td>30%</td><td>${bean.num }</td><td>${bean.endnum }</td></tr>
+				<tr> <td>${bean.user.name }</td><td>${(bean.endnum/bean.num)*100 }%</td><td>${bean.num }</td><td>${bean.endnum }</td></tr>
 				</c:forEach>
 					
 				</tbody>

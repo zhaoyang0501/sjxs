@@ -35,7 +35,10 @@ public class UserService extends BaseService<User, Integer> {
 	public HibernateDao<User, Integer> getEntityDao() {
 		return userDao;
 	}
-
+	@Transactional(readOnly=false)
+	public void updatecash(Double cash,Integer id){
+		userDao.updatecash(cash,id);
+	}
 	/**
 	 * 保存用户
 	 * @param user

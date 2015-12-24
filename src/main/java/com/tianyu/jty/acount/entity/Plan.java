@@ -41,13 +41,27 @@ public class Plan {
 	private String name;
 	private Integer num;
 	private Integer endnum;
-	
+	private Integer undist;
+	public Integer getUndist() {
+		return undist;
+	}
+	public void setUndist(Integer undist) {
+		this.undist = undist;
+	}
 	private Integer pplan;
-
+	
 	@JsonIgnore
 	@ManyToOne(fetch = FetchType.LAZY)
 	private User user;
 	
+	private Integer userid;
+	
+	public Integer getUserid() {
+		return userid;
+	}
+	public void setUserid(Integer userid) {
+		this.userid = userid;
+	}
 	private String remark;
 	public Integer getPplan() {
 		return pplan;

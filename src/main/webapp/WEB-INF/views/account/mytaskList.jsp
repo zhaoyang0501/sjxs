@@ -10,15 +10,11 @@
 <div id="tb" style="padding:5px;height:auto">
         <div>
         	<form id="searchFrom" action="">
-       	        <input type="text" name="filter_LIKES_name" class="easyui-validatebox" data-options="width:150,prompt: '用户名'"/>
+       	        <input type="text" name="filter_LIKES_name" class="easyui-validatebox" data-options="width:150,prompt: '姓名'"/>
 		        <a href="javascript(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="cx()">查询</a>
 			</form>
 			
-	       		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="add();">添加</a>
-	       		<span class="toolbar-item dialog-tool-separator"></span>
-	            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" data-options="disabled:false" onclick="del()">删除</a>
-	        	<span class="toolbar-item dialog-tool-separator"></span>
-	            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="upd()">修改</a>
+	       	  <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="upd()">查看销售单详细</a>
 	            <span class="toolbar-item dialog-tool-separator"></span>
         </div> 
         
@@ -31,7 +27,7 @@ var d;
 $(function(){   
 	dg=$('#dg').datagrid({    
 	method: "get",
-    url:'${ctx}/account/user/json', 
+    url:'${ctx}/account/mytask/json', 
     fit : true,
 	fitColumns : true,
 	border : false,
@@ -45,17 +41,13 @@ $(function(){
 	singleSelect:true,
     columns:[[    
         {field:'id',title:'id',hidden:true},    
-        {field:'loginName',title:'帐号',sortable:true,width:100},    
-        {field:'password',title:'密码',sortable:true,width:100},    
-        {field:'name',title:'姓名',sortable:true,width:100},
-        {field:'gender',title:'性别',sortable:true,
-        	formatter : function(value, row, index) {
-       			return value==1?'男':'女';
-        	}
-        },
-        {field:'email',title:'email',sortable:true,width:100},
-        {field:'phone',title:'电话',sortable:true,width:100}
-      
+        {field:'name',title:'姓名',sortable:true,width:100},    
+        {field:'customer',title:'客户姓名',sortable:true,width:100},    
+        {field:'addr',title:'客户地址',sortable:true,width:100},
+        {field:'cash',title:'订单合计',sortable:true,width:100},
+        {field:'earlycash',title:'定金',sortable:true,width:100},
+        {field:'realcash',title:'订单实际',sortable:true,width:100},
+        {field:'totalnum',title:'订单商品数量',sortable:true,width:100}
     ]],
     headerContextMenu: [
         {
@@ -77,23 +69,13 @@ $(function(){
 //弹窗增加
 function add() {
 	d=$("#dlg").dialog({   
-	    title: '添加2用户',    
-	    width: 680,    
-	    height: 580,    
+	    title: '添加用户',    
+	    width: 380,    
+	    height: 380,    
 	    href:'${ctx}/account/user/create',
 	    maximizable:true,
-	    modal:true,
-	    buttons:[{
-			text:'确认',
-			handler:function(){
-				$("#mainform").submit(); 
-			}
-		},{
-			text:'取消',
-			handler:function(){
-					d.panel('close');
-				}
-		}]
+	    modal:true
+	    
 	});
 }
 
@@ -119,23 +101,13 @@ function upd(){
 	var row = dg.datagrid('getSelected');
 	if(rowIsNull(row)) return;
 	d=$("#dlg").dialog({   
-	    title: '修改用户',    
+	    title: '销售单查看',    
 	    width: 680,    
-	    height: 580,    
-	    href:'${ctx}/account/user/update/'+row.id,
+	    height: 440,    
+	    href:'${ctx}/account/mytask/update/'+row.id,
 	    maximizable:true,
-	    modal:true,
-	    buttons:[{
-			text:'修改',
-			handler:function(){
-				$('#mainform').submit(); 
-			}
-		},{
-			text:'取消',
-			handler:function(){
-					d.panel('close');
-				}
-		}]
+	    modal:true
+	   
 	});
 }
 
@@ -145,8 +117,8 @@ function look(){
 	if(rowIsNull(row)) return;
 	d=$("#dlg").dialog({   
 	    title: '修改用户',    
-	    width: 680,    
-	    height: 580,  
+	    width: 380,    
+	    height: 340,    
 	    href:'${ctx}/account/user/update/'+row.id,
 	    maximizable:true,
 	    modal:true,

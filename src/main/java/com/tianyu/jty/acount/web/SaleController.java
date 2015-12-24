@@ -117,11 +117,14 @@ public class SaleController extends BaseController {
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	@ResponseBody
 	public String create(@Valid Sale sale, Model model) {
-		
+		int a=0;
 		for(SaleItem bean:sale.getSaleitems()){
+			a+=bean.getNum();
 			bean.setSale(sale);
 		}
-		sale.setUser(UserUtil.getCurrentUser());
+		sale.setTotalnum(a);
+		sale.setUserid(UserUtil.getCurrentUser().getId());
+		sale.setUser(userService.get(UserUtil.getCurrentUser().getId()));
 		saleService.save(sale);
 		return "success";
 	}

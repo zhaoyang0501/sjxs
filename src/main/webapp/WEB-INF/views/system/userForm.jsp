@@ -52,6 +52,17 @@
    				</td>
 			</tr>
 			
+			
+			<tr>
+				<td>上级经销商：</td>
+				<td><select id='puser.id' data-options="required:'required'" class="easyui-combobox easyui-validatebox"  name="puser.id" >
+				       	<c:forEach items="${users}" var="bean">
+				       		<option value="${bean.id}">${bean.name }</option>
+				       	</c:forEach>
+   					 </select>
+   				</td>
+			</tr>
+			
 			<tr>
 				<td>Email：</td>
 				<td><input type="text" name="email" value="${user.email }" class="easyui-validatebox" data-options="width: 150,validType:'email'"/></td>

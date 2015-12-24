@@ -43,8 +43,8 @@ $(function(){
         {field:'name',title:'计划名称',sortable:true,width:100},    
         {field:'startDate',title:'计划起',sortable:true,width:100},    
         {field:'endDate',title:'计划止',sortable:true,width:100},
-        {field:'num',title:'计划销量',sortable:true,width:100}
-       
+        {field:'num',title:'计划销量',sortable:true,width:100},
+        {field:'undist',title:'未分配销量',sortable:true,width:100}
       
     ]],
     headerContextMenu: [
