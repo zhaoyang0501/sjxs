@@ -308,11 +308,9 @@
      }
      
      function fun_typechange(){
-    	 alert($("#typename").val());
     	 $.ajax({
     		   url: "${ctx}/account/mytask/getsaletype/"+$("#typename").val(),
     		   success: function(msg){
-    		     alert(  msg.length );
     		     $("#salename").empty();
     		     $("#salename").append("<option value=''>--请选择--</option>");
     		     for(var i=0;i<msg.length;i++){

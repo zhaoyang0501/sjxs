@@ -1,11 +1,33 @@
-23:51:12.711 [qtp1276261147-35] ERROR 500.jsp - Name for argument type [java.lang.Integer] not available, and parameter name information not found in class file either.
-java.lang.IllegalArgumentException: Name for argument type [java.lang.Integer] not available, and parameter name information not found in class file either.
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.updateNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:141) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.getNamedValueInfo(AbstractNamedValueMethodArgumentResolver.java:119) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:86) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:77) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:162) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:129) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+14:53:32.937 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+14:53:33.072 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+14:53:33.770 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+14:53:34.357 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+14:53:34.382 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+14:53:34.387 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+14:53:34.421 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:03:07.211 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:03:07.215 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:03:07.261 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+15:03:07.276 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+15:03:07.294 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+15:03:07.298 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+15:03:07.321 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:09:31.650 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:09:31.706 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:09:31.764 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+15:09:31.779 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+15:09:31.796 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+15:09:31.799 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+15:09:31.822 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:10:13.003 [qtp1276261147-37] ERROR 500.jsp - null
+java.lang.NullPointerException: null
+	at com.tianyu.jty.acount.web.SaleController.create(SaleController.java:126) ~[classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_45]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_45]
+	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_45]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:777) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:706) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
@@ -59,38 +81,16 @@ java.lang.IllegalArgumentException: Name for argument type [java.lang.Integer] n
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
-23:51:36.585 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
-23:51:36.587 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
-23:51:36.623 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
-23:51:36.634 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
-23:51:36.647 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
-23:51:36.650 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
-23:51:36.669 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
-23:54:19.461 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
-23:54:19.463 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
-23:54:19.499 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
-23:54:19.510 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
-23:54:19.524 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
-23:54:19.527 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
-23:54:19.546 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
-23:54:40.803 [qtp1276261147-38] ERROR 500.jsp - null
+15:10:13.009 [qtp1276261147-37] ERROR o.s.w.servlet.HandlerExecutionChain - HandlerInterceptor.afterCompletion threw exception
 java.lang.NullPointerException: null
-	at com.tianyu.jty.acount.web.CashController.list(CashController.java:39) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_45]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_45]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_45]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:777) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:706) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at com.tianyu.jty.system.interceptor.LogInterceptor.afterCompletion(LogInterceptor.java:74) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.triggerAfterCompletion(HandlerExecutionChain.java:167) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1029) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:955) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) [javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755) [javax.servlet-3.0.0.v201112011016.jar:na]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
 	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
@@ -125,34 +125,50 @@ java.lang.NullPointerException: null
 	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.Server.handle(Server.java:370) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:971) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1033) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
-23:54:41.892 [qtp1276261147-39] ERROR 500.jsp - null
-java.lang.NullPointerException: null
-	at com.tianyu.jty.acount.web.CashController.list(CashController.java:39) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_45]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_45]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_45]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:110) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandleMethod(RequestMappingHandlerAdapter.java:777) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:706) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:943) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+15:12:50.683 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:12:50.687 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:12:50.727 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+15:12:50.743 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+15:12:50.758 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+15:12:50.761 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+15:12:50.782 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:15:45.171 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:15:45.174 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:15:45.218 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+15:15:45.234 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+15:15:45.249 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+15:15:45.252 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+15:15:45.273 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:19:04.423 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+15:19:04.428 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+15:19:04.467 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+15:19:04.485 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+15:19:04.501 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+15:19:04.504 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+15:19:04.529 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.
+15:19:30.989 [qtp1276261147-37] ERROR o.s.w.servlet.HandlerExecutionChain - HandlerInterceptor.afterCompletion threw exception
+org.apache.shiro.session.InvalidSessionException: java.lang.IllegalStateException
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:148) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.session.ProxiedSession.getAttribute(ProxiedSession.java:121) ~[shiro-core-1.2.2.jar:1.2.2]
+	at com.tianyu.jty.system.utils.UserUtil.getCurrentUser(UserUtil.java:46) ~[classes/:na]
+	at com.tianyu.jty.system.interceptor.LogInterceptor.afterCompletion(LogInterceptor.java:74) ~[classes/:na]
+	at org.springframework.web.servlet.HandlerExecutionChain.triggerAfterCompletion(HandlerExecutionChain.java:167) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.triggerAfterCompletion(DispatcherServlet.java:1279) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:958) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:877) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:966) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:857) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735) [javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755) [javax.servlet-3.0.0.v201112011016.jar:na]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) [spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) [javax.servlet-3.0.0.v201112011016.jar:na]
 	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
@@ -187,13 +203,221 @@ java.lang.NullPointerException: null
 	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.Server.handle(Server.java:370) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:971) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1033) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
-	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
+Caused by: java.lang.IllegalStateException: null
+	at org.eclipse.jetty.server.session.AbstractSession.checkValid(AbstractSession.java:109) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.HashedSession.checkValid(HashedSession.java:73) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.AbstractSession.getAttribute(AbstractSession.java:132) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:146) ~[shiro-web-1.2.2.jar:1.2.2]
+	... 54 common frames omitted
+15:19:30.998 [qtp1276261147-37] WARN  o.e.jetty.servlet.ServletHandler - 
+javax.servlet.ServletException: Filtered request failed.
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:384) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at com.tianyu.jty.system.utils.AjaxFilter.doFilter(AjaxFilter.java:36) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.orm.hibernate4.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:150) ~[spring-orm-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1476) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:501) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557) [jetty-security-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:429) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.handle(Server.java:370) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
+Caused by: org.apache.shiro.session.InvalidSessionException: java.lang.IllegalStateException
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:148) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.session.ProxiedSession.getAttribute(ProxiedSession.java:121) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getRunAsPrincipalsStack(DelegatingSubject.java:469) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipals(DelegatingSubject.java:153) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipal(DelegatingSubject.java:149) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getSubjectPrincipal(ShiroHttpServletRequest.java:95) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getUserPrincipal(ShiroHttpServletRequest.java:111) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.getUsernameForRequest(FrameworkServlet.java:1087) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.publishRequestHandledEvent(FrameworkServlet.java:1073) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1496) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	... 34 common frames omitted
+Caused by: java.lang.IllegalStateException: null
+	at org.eclipse.jetty.server.session.AbstractSession.checkValid(AbstractSession.java:109) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.HashedSession.checkValid(HashedSession.java:73) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.AbstractSession.getAttribute(AbstractSession.java:132) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:146) ~[shiro-web-1.2.2.jar:1.2.2]
+	... 55 common frames omitted
+15:19:30.999 [qtp1276261147-37] WARN  o.e.jetty.servlet.ServletHandler - /jty/account/sale/create
+org.apache.shiro.session.InvalidSessionException: java.lang.IllegalStateException
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:148) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.session.ProxiedSession.getAttribute(ProxiedSession.java:121) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getRunAsPrincipalsStack(DelegatingSubject.java:469) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipals(DelegatingSubject.java:153) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipal(DelegatingSubject.java:149) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getSubjectPrincipal(ShiroHttpServletRequest.java:95) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getUserPrincipal(ShiroHttpServletRequest.java:111) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.getUsernameForRequest(FrameworkServlet.java:1087) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.publishRequestHandledEvent(FrameworkServlet.java:1073) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1496) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at com.tianyu.jty.system.utils.AjaxFilter.doFilter(AjaxFilter.java:36) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.orm.hibernate4.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:150) ~[spring-orm-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1476) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:501) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557) [jetty-security-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:429) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.handle(Server.java:370) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
+Caused by: java.lang.IllegalStateException: null
+	at org.eclipse.jetty.server.session.AbstractSession.checkValid(AbstractSession.java:109) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.HashedSession.checkValid(HashedSession.java:73) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.AbstractSession.getAttribute(AbstractSession.java:132) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:146) ~[shiro-web-1.2.2.jar:1.2.2]
+	... 55 common frames omitted
+15:19:31.209 [qtp1276261147-37] ERROR 500.jsp - java.lang.IllegalStateException
+org.apache.shiro.session.InvalidSessionException: java.lang.IllegalStateException
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:148) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.session.ProxiedSession.getAttribute(ProxiedSession.java:121) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getRunAsPrincipalsStack(DelegatingSubject.java:469) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipals(DelegatingSubject.java:153) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.getPrincipal(DelegatingSubject.java:149) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getSubjectPrincipal(ShiroHttpServletRequest.java:95) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.ShiroHttpServletRequest.getUserPrincipal(ShiroHttpServletRequest.java:111) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.servlet.FrameworkServlet.getUsernameForRequest(FrameworkServlet.java:1087) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.publishRequestHandledEvent(FrameworkServlet.java:1073) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:868) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:755) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:842) ~[spring-webmvc-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848) ~[javax.servlet-3.0.0.v201112011016.jar:na]
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1496) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:383) ~[shiro-core-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.2.2.jar:1.2.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:344) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:261) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at com.tianyu.jty.system.utils.AjaxFilter.doFilter(AjaxFilter.java:36) ~[classes/:na]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.orm.hibernate4.support.OpenSessionInViewFilter.doFilterInternal(OpenSessionInViewFilter.java:150) ~[spring-orm-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1484) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.1.3.RELEASE.jar:4.1.3.RELEASE]
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1476) ~[jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:501) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557) [jetty-security-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:429) [jetty-servlet-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.Server.handle(Server.java:370) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:982) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:1043) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:865) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240) [jetty-http-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82) [jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:696) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:53) [jetty-io-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [jetty-util-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
+Caused by: java.lang.IllegalStateException: null
+	at org.eclipse.jetty.server.session.AbstractSession.checkValid(AbstractSession.java:109) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.HashedSession.checkValid(HashedSession.java:73) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.eclipse.jetty.server.session.AbstractSession.getAttribute(AbstractSession.java:132) ~[jetty-server-8.1.16.v20140903.jar:8.1.16.v20140903]
+	at org.apache.shiro.web.session.HttpServletSession.getAttribute(HttpServletSession.java:146) ~[shiro-web-1.2.2.jar:1.2.2]
+	... 55 common frames omitted
+17:52:24.495 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.spi.UpdateTimestampsCache]; using defaults.
+17:52:24.555 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [org.hibernate.cache.internal.StandardQueryCache]; using defaults.
+17:52:24.955 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Organization]; using defaults.
+17:52:25.301 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Role]; using defaults.
+17:52:25.330 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.AreaInfo]; using defaults.
+17:52:25.335 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Permission]; using defaults.
+17:52:25.372 [main] WARN  o.h.c.e.AbstractEhcacheRegionFactory - HHH020003: Could not find a specific ehcache configuration for cache named [com.tianyu.jty.system.entity.Dict]; using defaults.

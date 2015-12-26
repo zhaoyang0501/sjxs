@@ -125,7 +125,24 @@ public class SaleController extends BaseController {
 		sale.setTotalnum(a);
 		sale.setUserid(UserUtil.getCurrentUser().getId());
 		sale.setUser(userService.get(UserUtil.getCurrentUser().getId()));
+		
 		saleService.save(sale);
+		
+		List<Plan> plans=planService.findByPid(UserUtil.getCurrentUser().getId(), sale.getCreateDate());
+		for(Plan plan:plans){
+			plan.setEndnum(plan.getEndnum()+sale.getTotalnum());
+			planService.save(plan);
+			Plan plan1=planService.get(plan.getPplan());
+			if(plan1!=null){
+				plan1.setEndnum(plan1.getEndnum()+sale.getTotalnum());
+				planService.save(plan1);
+				Plan plan2=planService.get(plan1.getPplan());
+				if(plan2!=null){
+					plan2.setEndnum(plan2.getEndnum()+sale.getTotalnum());
+					planService.save(plan2);
+				}
+			}
+		}
 		return "success";
 	}
 

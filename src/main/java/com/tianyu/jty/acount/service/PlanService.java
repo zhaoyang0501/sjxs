@@ -1,5 +1,6 @@
 package com.tianyu.jty.acount.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,8 @@ public class PlanService extends BaseService<Plan, Integer> {
 	}
 	public List<Plan> findByPid(Integer pid){
 		return this.planDao.findByPid(pid);
+	}
+	public List<Plan> findByPid(Integer uid,Date createDat){
+		return this.planDao.findByUser(uid, createDat);
 	}
 }
