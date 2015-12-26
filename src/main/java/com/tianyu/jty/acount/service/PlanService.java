@@ -9,7 +9,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.tianyu.jty.acount.dao.PlanDao;
 import com.tianyu.jty.acount.entity.Plan;
-import com.tianyu.jty.acount.entity.Trade;
 import com.tianyu.jty.common.persistence.HibernateDao;
 import com.tianyu.jty.common.service.BaseService;
 import com.tianyu.jty.common.utils.DateUtils;

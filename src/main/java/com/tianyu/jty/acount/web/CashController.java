@@ -1,7 +1,5 @@
 package com.tianyu.jty.acount.web;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,12 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tianyu.jty.acount.entity.AccountUser;
-import com.tianyu.jty.acount.entity.Sale;
 import com.tianyu.jty.acount.service.SaleService;
-import com.tianyu.jty.acount.service.SaleTypeService;
 import com.tianyu.jty.common.web.BaseController;
-import com.tianyu.jty.system.entity.User;
 import com.tianyu.jty.system.service.UserService;
 import com.tianyu.jty.system.utils.UserUtil;
 

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.tianyu.jty.acount.entity.AccountUser;
 import com.tianyu.jty.acount.entity.Sale;
 import com.tianyu.jty.acount.entity.SaleType;
 import com.tianyu.jty.acount.service.SaleService;
@@ -27,7 +26,6 @@ import com.tianyu.jty.common.web.BaseController;
 import com.tianyu.jty.system.utils.UserUtil;
 
 /**
- * 用户controller
  * @author ty
  * @date 2015年1月13日
  */
@@ -71,7 +69,6 @@ public class MytaskController extends BaseController {
 	 */
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public String createForm(Model model) {
-		model.addAttribute("user", new AccountUser());
 		model.addAttribute("action", "create");
 		return "account/userForm";
 	}

@@ -104,6 +104,7 @@ public class SaleController extends BaseController {
 	public String createForm(Model model) {
 		model.addAttribute("plan", new Plan());
 		model.addAttribute("action", "create");
+		model.addAttribute("cash", userService.get(UserUtil.getCurrentUser().getId()).getCash());
 		model.addAttribute("types",accountTypeService.getAll() );
 		return "account/salecreate";
 	}

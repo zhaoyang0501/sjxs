@@ -106,7 +106,7 @@
                 </tr>
                 <tr>
                     <td>定金:</td>
-                    <td><input id="earlycash" value="0"   name="earlycash" type="text"  onchange="fun_change()"></input></td>
+                    <td><input id="earlycash" value="${cash }"   name="earlycash" type="text"  onchange="fun_change()"></input></td>
                 </tr>
                 
                 <tr>

@@ -18,24 +18,14 @@
 		        <a href="javascript(0)" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="cx()">查询</a>
 			</form>
 			
-	       	<shiro:hasPermission name="sys:user:add">
 	       		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="add();">添加</a>
 	       		<span class="toolbar-item dialog-tool-separator"></span>
-	       	</shiro:hasPermission>
-	       	<shiro:hasPermission name="sys:user:delete">
 	            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" data-options="disabled:false" onclick="del()">删除</a>
 	        	<span class="toolbar-item dialog-tool-separator"></span>
-	        </shiro:hasPermission>
-	        <shiro:hasPermission name="sys:user:update">
 	            <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="upd()">修改</a>
 	            <span class="toolbar-item dialog-tool-separator"></span>
-	        </shiro:hasPermission>
-	        <shiro:hasPermission name="sys:user:roleView">
         		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-hamburg-suppliers" plain="true" onclick="userForRole()">用户角色</a>
-        	</shiro:hasPermission>
-        	<shiro:hasPermission name="sys:user:orgView">
         		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cologne-home" plain="true" onclick="userForOrg()">用户所属机构</a>
-        	</shiro:hasPermission>
         </div> 
         
   </div>

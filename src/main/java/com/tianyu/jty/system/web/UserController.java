@@ -57,7 +57,6 @@ public class UserController extends BaseController {
 	/**
 	 * 获取用户json
 	 */
-	@RequiresPermissions("sys:user:view")
 	@RequestMapping(value="json",method = RequestMethod.GET)
 	@ResponseBody
 	public Map<String, Object> getData(HttpServletRequest request) {
@@ -72,7 +71,6 @@ public class UserController extends BaseController {
 	 * 
 	 * @param model
 	 */
-	@RequiresPermissions("sys:user:add")
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public String createForm(Model model) {
 		model.addAttribute("user", new User());
@@ -87,7 +85,6 @@ public class UserController extends BaseController {
 	 * @param user
 	 * @param model
 	 */
-	@RequiresPermissions("sys:user:add")
 	@RequestMapping(value = "create", method = RequestMethod.POST)
 	@ResponseBody
 	public String create(@Valid User user, Model model) {
@@ -102,7 +99,6 @@ public class UserController extends BaseController {
 	 * @param model
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:update")
 	@RequestMapping(value = "update/{id}", method = RequestMethod.GET)
 	public String updateForm(@PathVariable("id") Integer id, Model model) {
 		model.addAttribute("user", userService.get(id));
@@ -118,7 +114,6 @@ public class UserController extends BaseController {
 	 * @param model
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:update")
 	@RequestMapping(value = "update", method = RequestMethod.POST)
 	@ResponseBody
 	public String update(@Valid @ModelAttribute @RequestBody User user,Model model) {
@@ -132,7 +127,6 @@ public class UserController extends BaseController {
 	 * @param id
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:delete")
 	@RequestMapping(value = "delete/{id}")
 	@ResponseBody
 	public String delete(@PathVariable("id") Integer id) {
@@ -147,7 +141,6 @@ public class UserController extends BaseController {
 	 * @param model
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:roleView")
 	@RequestMapping(value = "{userId}/userRole")
 	public String getUserRole(@PathVariable("userId") Integer id, Model model) {
 		model.addAttribute("userId", id);
@@ -160,7 +153,6 @@ public class UserController extends BaseController {
 	 * @param model
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:orgView")
 	@RequestMapping(value = "{userId}/userOrg")
 	public String getUserOrg(@PathVariable("userId") Integer id, Model model) {
 		model.addAttribute("userId", id);
@@ -173,7 +165,6 @@ public class UserController extends BaseController {
 	 * @param id
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:roleView")
 	@RequestMapping(value = "{id}/role")
 	@ResponseBody
 	public List<Integer> getRoleIdList(@PathVariable("id") Integer id) {
@@ -184,7 +175,6 @@ public class UserController extends BaseController {
 	 * @param id
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:orgView")
 	@RequestMapping(value = "{id}/org")
 	@ResponseBody
 	public List<Integer> getOrgIdList(@PathVariable("id") Integer id) {
@@ -198,7 +188,6 @@ public class UserController extends BaseController {
 	 * @param newRoleList
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:roleUpd")
 	@RequestMapping(value = "{id}/updateRole")
 	@ResponseBody
 	public String updateUserRole(@PathVariable("id") Integer id,@RequestBody List<Integer> newRoleList) {
@@ -212,7 +201,6 @@ public class UserController extends BaseController {
 	 * @param newRoleList
 	 * @return
 	 */
-	@RequiresPermissions("sys:user:orgUpd")
 	@RequestMapping(value = "{id}/updateOrg")
 	@ResponseBody
 	public String updateUserOrg(@PathVariable("id") Integer id,@RequestBody List<Integer> newRoleList) {
